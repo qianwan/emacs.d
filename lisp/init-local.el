@@ -32,7 +32,11 @@
 (setq imaxima-use-maxima-mode-flag t)
 (add-to-list 'auto-mode-alist '("\\.ma[cx]" . maxima-mode))
 
-;;; shortcut
+;;; ensime
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+;;; global shortcut
 (global-set-key (kbd "<f5>") 'ibuffer)
 
 (provide 'init-local)

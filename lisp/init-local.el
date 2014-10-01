@@ -33,6 +33,7 @@
 (add-to-list 'auto-mode-alist '("\\.ma[cx]" . maxima-mode))
 
 ;;; ensime
+(require-package 'ensime)
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 

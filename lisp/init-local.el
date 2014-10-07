@@ -57,8 +57,9 @@
 (require 'w3m-haddock)
 (add-hook 'w3m-display-hook 'w3m-haddock-display)
 
-;;; global shortcut
-(global-set-key (kbd "<f5>") 'ibuffer)
+;;; global key bind
+(global-set-key (kbd "C-x a w") 'delete-other-windows)
+(global-set-key (kbd "C-x w") 'delete-other-window)
 
 (provide 'init-local)
 ;;; init-local.el ends here

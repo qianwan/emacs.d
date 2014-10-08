@@ -58,8 +58,7 @@
 (add-hook 'w3m-display-hook 'w3m-haddock-display)
 
 ;;; global key bind
-(global-set-key (kbd "C-x a w") 'delete-other-windows)
-(global-set-key (kbd "C-x w") 'delete-other-window)
+(global-set-key (kbd "C-x a w") 'delete-other-window)
 
 (provide 'init-local)
 ;;; init-local.el ends here

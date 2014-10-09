@@ -60,5 +60,8 @@
 ;;; global key bind
 (global-set-key (kbd "C-x a w") 'delete-other-window)
 
+;;; pig mode
+(setq pig-indent-level 2)
+
 (provide 'init-local)
 ;;; init-local.el ends here

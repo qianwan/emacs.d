@@ -4,6 +4,9 @@
 
 ;;; Code:
 
+(require-package 'elpy)
+(elpy-enable)
+
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 
 (require-package 'slime)
@@ -23,15 +26,6 @@
 
 (require 'cltl2)
 
-;;; maxima
-(add-to-list 'load-path "/usr/local/Cellar/maxima/5.33.0/share/maxima/5.33.0/emacs/")
-(autoload 'maxima-mode "maxima" "Maxima mode" t)
-(autoload 'imaxima "imaxima" "Frontend for maxima with Image support" t)
-(autoload 'maxima "maxima" "Maxima interaction" t)
-(autoload 'imath-mode "imath" "Imath mode for math formula input" t)
-(setq imaxima-use-maxima-mode-flag t)
-(add-to-list 'auto-mode-alist '("\\.ma[cx]" . maxima-mode))
-
 ;;; ensime
 (require-package 'ensime)
 (require 'ensime)
@@ -47,6 +41,8 @@
 (global-set-key (kbd "C-x a w") 'delete-other-window)
 
 ;;; pig mode
+(require-package 'pig-mode)
+(require 'pig-mode)
 (setq pig-indent-level 2)
 
 ;;; line-number

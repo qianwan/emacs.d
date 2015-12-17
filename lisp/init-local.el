@@ -14,6 +14,8 @@
   (interactive)
   (let ((comint-buffer-maximum-size 0))
     (comint-truncate-buffer)))
+(add-hook 'comint-output-filter-functions
+          'comint-truncate-buffer)
 
 (require-package 'slime)
 (setq slime-lisp-implementations

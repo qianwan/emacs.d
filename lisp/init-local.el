@@ -4,10 +4,16 @@
 
 ;;; Code:
 
+(add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
+
 (require-package 'elpy)
 (elpy-enable)
 
-(add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
+;;; shell
+(defun clear-shell ()
+  (interactive)
+  (let ((comint-buffer-maximum-size 0))
+    (comint-truncate-buffer)))
 
 (require-package 'slime)
 (setq slime-lisp-implementations

@@ -53,6 +53,9 @@
 (require 'pig-mode)
 (setq pig-indent-level 2)
 
+;;; cider
+(add-hook 'cider-repl-mode-hook #'eldoc-mode)
+
 ;;; line-number
 (require-package 'linum)
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))

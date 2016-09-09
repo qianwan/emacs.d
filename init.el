@@ -63,8 +63,8 @@
 
 (require 'init-recentf)
 (require 'init-smex)
-(require 'init-ido)
-;; (require 'init-ivy)
+;; (require 'init-ido)
+(require 'init-ivy)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
@@ -117,6 +117,7 @@
 
 (require 'init-misc)
 
+(require 'init-folding)
 (require 'init-dash)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration

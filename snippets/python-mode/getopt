@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: getopt
+# key: getopt
+# --
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+import getopt
+
+
+def usage(prog):
+    print "%s -c config [-h]" % prog
+    exit(0)
+
+
+def main():
+    shortargs = 'c:h'
+    longargs = ['config=', 'help']
+    opts, args = getopt.getopt(sys.argv[1:], shortargs, longargs)
+    for opt, val in opts:
+        if opt in ('-h', '--help'):
+            usage(sys.argv[0])
+        if opt in ('-c', '--config'):
+            config = val
+    print 'config=%s' % config
+    pass
+
+
+if __name__ == "__main__":
+    main()

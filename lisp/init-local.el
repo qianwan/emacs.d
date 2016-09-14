@@ -75,5 +75,9 @@
           (propertize (number-to-string line) 'face 'linum))))
      (setq linum-format 'linum-format-func)))
 
+;;; disable tab expand in yas-minor mode
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+
 (provide 'init-local)
 ;;; init-local.el ends here

@@ -29,8 +29,8 @@
   (dolist (var '("JAVA_HOME"))
     (add-to-list 'exec-path-from-shell-variables var)))
 
-(require-package 'pretty-lambdada)
-(pretty-lambda-for-modes)
+;;(require-package 'pretty-lambdada)
+;;(pretty-lambda-for-modes)
 
 (require 'cltl2)
 

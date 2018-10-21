@@ -9,6 +9,9 @@
 (require-package 'elpy)
 (elpy-enable)
 
+(when *is-a-mac*
+  (setq mac-option-modifier 'meta))
+
 ;;; shell
 (defun clear-shell ()
   (interactive)

@@ -1,3 +1,7 @@
+;;; init-elpa.el --- Settings and helpers for package.el -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (require 'package)
 
 
@@ -23,11 +27,6 @@
     (unless no-ssl
       ;; Force SSL for GNU ELPA
       (setcdr (assoc "gnu" package-archives) "https://elpa.gnu.org/packages/"))))
-
-;; We include the org repository for completeness, but don't normally
-;; use it.
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-
 
 
 ;;; On-demand installation of packages
@@ -111,3 +110,4 @@ locate PACKAGE."
 
 
 (provide 'init-elpa)
+;;; init-elpa.el ends here

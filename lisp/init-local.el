@@ -59,25 +59,6 @@
 ;;; cider
 (add-hook 'cider-repl-mode-hook #'eldoc-mode)
 
-;;; line-number
-(require-package 'linum)
-(add-hook 'find-file-hook (lambda () (linum-mode 1)))
-(eval-after-load 'linum
-  '(progn
-     (defface linum-leading-zero
-       `((t :inherit 'linum
-            :foreground ,(face-attribute 'linum :background nil t)))
-       "Face for displaying leading zeroes for line numbers in display margin."
-       :group 'linum)
-     (defun linum-format-func (line)
-       (let ((w (length
-                 (number-to-string (count-lines (point-min) (point-max))))))
-         (concat
-          (propertize (make-string (- w (length (number-to-string line))) ?0)
-                      'face 'linum-leading-zero)
-          (propertize (number-to-string line) 'face 'linum))))
-     (setq linum-format 'linum-format-func)))
-
 ;;; disable tab expand in yas-minor mode
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)

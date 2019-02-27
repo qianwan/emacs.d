@@ -63,5 +63,12 @@
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 
+;;; julia
+(require 'julia-repl)
+(add-hook 'julia-mode-hook 'julia-repl-mode)
+(setenv "JULIA_NUM_THREADS" "2")
+(setq julia-repl-executable-records
+      '((default "/usr/local/bin/julia")))
+
 (provide 'init-local)
 ;;; init-local.el ends here

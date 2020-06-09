@@ -36,6 +36,7 @@
 ;;(pretty-lambda-for-modes)
 
 (require 'cltl2)
+(require 'dash-at-point)
 
 ;;; ensime
 (require-package 'ensime)

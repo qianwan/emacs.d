@@ -54,3 +54,4 @@ site-lisp/package/
 .cache/
 /forge-database.sqlite
 /transient
+elpy

@@ -13,8 +13,6 @@ import json
 def main():
     for line in sys.stdin:
         hit = json.loads(line)
-        pass
-    pass
 
 
 if __name__ == "__main__":

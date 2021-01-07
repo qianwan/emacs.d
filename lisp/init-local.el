@@ -39,9 +39,9 @@
 (require 'dash-at-point)
 
 ;;; ensime
-(require-package 'ensime)
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+;; (require-package 'ensime)
+;; (require 'ensime)
+;; (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 ;; OPTIONAL
 ;; there are some great Scala yasnippets, browse through:
 ;; https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/scala-mode

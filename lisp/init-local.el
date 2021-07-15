@@ -51,6 +51,7 @@
 
 ;;; global key bind
 (global-set-key (kbd "C-x a w") 'delete-other-window)
+(global-set-key (kbd "M-SPC") 'set-mark-command)
 
 ;;; pig mode
 (require-package 'pig-mode)
